@@ -24,7 +24,6 @@
       />
 
       <template #right>
-        <UColorModeButton class="hidden sm:inline-flex" />
         <UButton
           to="#products"
           label="Shop Now"
