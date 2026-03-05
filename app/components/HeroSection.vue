@@ -92,13 +92,13 @@ const links = ref<ButtonProps[]>([
   {
     label: 'Shop Now',
     to: '#products',
-    color: 'primary',
+    color: 'primary'
   },
   {
     label: 'Learn the Science',
     to: '#science',
     color: 'neutral',
-    variant: 'outline',
+    variant: 'outline'
   }
 ])
 </script>
