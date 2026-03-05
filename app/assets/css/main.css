@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  --font-sans: 'Public Sans', system-ui, sans-serif;
+
+  /* Primary (blue) - trust, action, main brand emphasis */
+  --color-blue-50: #EFF7FF;
+  --color-blue-100: #DCEEFF;
+  --color-blue-200: #B6DBFF;
+  --color-blue-300: #84C2FF;
+  --color-blue-400: #4AA5F5;
+  --color-blue-500: #1D86D9;
+  --color-blue-600: #116CB8;
+  --color-blue-700: #0F568F;
+  --color-blue-800: #114976;
+  --color-blue-900: #143E61;
+
+  /* Secondary (green) - natural wellness, organic cues */
+  --color-green-50: #EDF9F1;
+  --color-green-100: #D8F0DE;
+  --color-green-200: #B7E0C1;
+  --color-green-300: #8CC79B;
+  --color-green-400: #5DAA73;
+  --color-green-500: #3F8858;
+  --color-green-600: #326C46;
+  --color-green-700: #2B573B;
+  --color-green-800: #274634;
+  --color-green-900: #223A2D;
+
+  /* Constrain content width for premium feel (1100-1280px range) */
+  --ui-container: 1200px;
+}
