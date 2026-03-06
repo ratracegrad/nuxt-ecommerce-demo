@@ -4,7 +4,7 @@
     title="Choose Your Flavor"
     description="Find the perfect protein shake flavor for your wellness goals."
     orientation="vertical"
-    class="bg-gray-100/80"
+    class="bg-primary-100 dark:bg-default"
   >
     <template #body>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -28,7 +28,7 @@
             <p class="text-sm ">
               {{ product.description }}
             </p>
-            <!-- <UButton
+            <UButton
               to="#"
               color="neutral"
               variant="solid"
@@ -36,7 +36,7 @@
               class="mt-4 w-full rounded-lg"
             >
               Shop {{ product.name }}
-            </UButton> -->
+            </UButton>
           </template>
         </UPageCard>
       </div>
