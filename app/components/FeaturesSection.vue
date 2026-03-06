@@ -22,10 +22,10 @@
               >
                 {{ feature.badge }}
               </UBadge>
-              <h3 class="text-2xl sm:text-3xl font-bold text-gray-900">
+              <h3 class="text-2xl sm:text-3xl font-bold">
                 {{ feature.name }}
               </h3>
-              <p class="text-gray-600 text-lg">
+              <p class="text-lg">
                 {{ feature.description }}
               </p>
               <div class="flex flex-wrap gap-2">
@@ -63,7 +63,8 @@
                 <div class="absolute bottom-4 right-4">
                   <UIcon
                     name="i-lucide-leaf"
-                    class="size-12 text-secondary-400/50"
+                    class="size-12"
+                    :class="feature.colorClass"
                   />
                 </div>
               </div>

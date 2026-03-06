@@ -12,7 +12,7 @@
           v-for="product in products"
           :key="product.id"
           variant="subtle"
-          class="rounded-xl shadow-lg overflow-hidden group hover:ring-2 hover:ring-primary-200 transition-all"
+          class="rounded-xl shadow-lg overflow-hidden group hover:ring-4 hover:ring-primary-500 transition-all"
         >
           <div class="aspect-square overflow-hidden">
             <img
@@ -22,18 +22,18 @@
             >
           </div>
           <template #body>
-            <h3 class="font-semibold text-gray-900">
+            <h3 class="text-xl font-semibold">
               {{ product.name }}
             </h3>
-            <p class="text-sm ">
+            <p class="text-sm mt-2 ">
               {{ product.description }}
             </p>
             <UButton
               to="#"
-              color="neutral"
+              color="primary"
               variant="solid"
               size="sm"
-              class="mt-4 w-full rounded-lg"
+              class="mt-4 rounded-lg"
             >
               Shop {{ product.name }}
             </UButton>

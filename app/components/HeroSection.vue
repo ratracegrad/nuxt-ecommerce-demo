@@ -3,7 +3,7 @@
     orientation="horizontal"
     description="Clean supplements formulated for real results. No harsh chemicals, no crash—just the nutrients your body needs to thrive."
     :links="links"
-    class="bg-primary-100 dark:bg-default bg-radial from-primary-50 from-40% to-primary-500"
+    class="bg-primary-100 dark:bg-default"
   >
     <template #headline>
       <UBadge

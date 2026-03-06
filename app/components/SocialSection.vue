@@ -4,7 +4,7 @@
     title="Loved by thousands"
     description="Real results from real people. Join our community of wellness enthusiasts."
     orientation="vertical"
-    class="bg-primary-50"
+    class="bg-primary-50 dark:bg-default"
   >
     <UPageGrid>
       <div

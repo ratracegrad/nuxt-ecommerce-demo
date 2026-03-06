@@ -4,7 +4,7 @@
     description="Share your wellness journey. Tag us for a chance to be featured."
     orientation="vertical"
     :links="[{ label: 'Follow on Instagram', to: '#', target: '_blank', color: 'secondary', size: 'lg', class: 'rounded-full' }]"
-    class="bg-secondary-50"
+    class="bg-secondary-50 dark:bg-default"
   >
     <template #body>
       <div class="relative h-64 md:h-80 rounded-2xl overflow-hidden">

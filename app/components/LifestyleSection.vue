@@ -19,7 +19,7 @@
         <li
           v-for="item in lifestyleBenefits"
           :key="item"
-          class="flex items-center gap-3 text-gray-700"
+          class="flex items-center gap-3"
         >
           <UIcon
             name="i-lucide-check"
@@ -31,9 +31,9 @@
     </template>
 
     <template #default>
-      <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100">
+      <div class="relative aspect-4/3 rounded-2xl overflow-hidden bg-gray-100">
         <div class="absolute inset-0 flex items-center justify-center">
-          <div class="w-48 h-64 rounded-2xl bg-gradient-to-br from-primary-300 to-primary-600 shadow-2xl" />
+          <div class="w-48 h-64 rounded-2xl bg-linear-to-br from-primary-300 to-primary-600 shadow-2xl" />
         </div>
       </div>
     </template>

@@ -1,139 +1,118 @@
 <template>
-  <footer class="bg-gray-900 text-white">
-    <UContainer class="py-16 md:py-20">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
-        <!-- Left: Product promise + newsletter -->
-        <div class="lg:col-span-1 space-y-6">
-          <h3 class="text-lg font-bold text-white">
-            Feel the difference. Naturally.
-          </h3>
-          <p class="text-sm text-gray-400">
-            Join thousands who've transformed their wellness with SpaSupreme.
-          </p>
-          <form
-            class="flex gap-2"
-            @submit.prevent="subscribe"
-          >
-            <UInput
-              v-model="email"
-              type="email"
-              placeholder="Enter your email"
-              class="flex-1 bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 rounded-lg"
-              size="md"
-            />
-            <UButton
-              type="submit"
-              label="Join"
-              color="primary"
-              size="md"
-              class="rounded-lg shrink-0"
-            />
-          </form>
-        </div>
+  <UFooter
+    class="bg-gray-900 text-white dark:bg-default dark:text-default"
+    :ui="{ top: 'border-b border-gray-800' }"
+  >
+    <template #top>
+      <UContainer>
+        <UFooterColumns :columns="columns">
+          <template #left>
+            <div class="space-y-4">
+              <h3 class="text-lg font-semibold">
+                Feel the difference. Naturally.
+              </h3>
+              <p class="text-sm">
+                Join thousands who've transformed their wellness with SpaSupreme.
+              </p>
+              <form
+                class="flex gap-2"
+                @submit.prevent="subscribe"
+              >
+                <UInput
+                  v-model="email"
+                  type="email"
+                  placeholder="Enter your email"
+                  class="flex-1 bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 rounded-lg"
+                  size="md"
+                />
+                <UButton
+                  type="submit"
+                  label="Join"
+                  color="primary"
+                  size="md"
+                  class="rounded-lg shrink-0"
+                />
+              </form>
+            </div>
+            <div class="space-y-4 mt-8">
+              <h4 class="text-lg font-semibold">
+                Contact
+              </h4>
+              <address>
+                <p>SpaSupreme Inc.</p>
+                <p>123 Wellness Ave</p>
+                <p>San Francisco, CA 94102</p>
+              </address>
+            </div>
+          </template>
 
-        <!-- Discover -->
-        <div>
-          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-            Discover
-          </h4>
-          <ul class="space-y-3">
-            <li>
-              <ULink
-                to="#products"
-                class="text-gray-400 hover:text-white text-sm transition-colors"
-              >Products</ULink>
-            </li>
-            <li>
-              <ULink
-                to="#science"
-                class="text-gray-400 hover:text-white text-sm transition-colors"
-              >Science</ULink>
-            </li>
-            <li>
-              <ULink
-                to="#reviews"
-                class="text-gray-400 hover:text-white text-sm transition-colors"
-              >Reviews</ULink>
-            </li>
-            <li>
-              <ULink
-                to="#faq"
-                class="text-gray-400 hover:text-white text-sm transition-colors"
-              >FAQ</ULink>
-            </li>
-          </ul>
-        </div>
+          <template #default />
+        </UFooterColumns>
+      </UContainer>
+    </template>
 
-        <!-- Support -->
-        <div>
-          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-            Support
-          </h4>
-          <ul class="space-y-3">
-            <li>
-              <ULink
-                to="#"
-                class="text-gray-400 hover:text-white text-sm transition-colors"
-              >Contact Us</ULink>
-            </li>
-            <li>
-              <ULink
-                to="#"
-                class="text-gray-400 hover:text-white text-sm transition-colors"
-              >Shipping</ULink>
-            </li>
-            <li>
-              <ULink
-                to="#"
-                class="text-gray-400 hover:text-white text-sm transition-colors"
-              >Returns</ULink>
-            </li>
-            <li>
-              <ULink
-                to="#"
-                class="text-gray-400 hover:text-white text-sm transition-colors"
-              >Track Order</ULink>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Contact -->
-        <div>
-          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-            Contact
-          </h4>
-          <address class="text-gray-400 text-sm not-italic space-y-1">
-            <p>SpaSupreme Inc.</p>
-            <p>123 Wellness Ave</p>
-            <p>San Francisco, CA 94102</p>
-          </address>
-        </div>
+    <template #left>
+      <div class="flex flex-wrap justify-center lg:justify-start gap-4 text-sm">
+        <ULink
+          to="#"
+        >
+          Privacy Policy
+        </ULink>
+        <ULink
+          to="#"
+        >
+          Terms of Service
+        </ULink>
       </div>
+    </template>
 
-      <!-- Bottom row -->
-      <div class="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
-          <ULink
-            to="#"
-            class="text-gray-500 hover:text-gray-300 transition-colors"
-          >Privacy Policy</ULink>
-          <ULink
-            to="#"
-            class="text-gray-500 hover:text-gray-300 transition-colors"
-          >Terms of Service</ULink>
-        </div>
-        <p class="text-gray-500 text-sm">
-          © {{ new Date().getFullYear() }} SpaSupreme. All rights reserved.
-        </p>
-        <div class="shrink-0">
-          <AppLogo inverse />
-        </div>
-      </div>
-    </UContainer>
-  </footer>
+    <template #default>
+      <p class="text-sm">
+        © {{ new Date().getFullYear() }} SpaSupreme. All rights reserved.
+      </p>
+    </template>
+
+    <template #right>
+      <AppLogo />
+    </template>
+  </UFooter>
 </template>
 
 <script setup lang="ts">
+const columns = [
+  {
+    label: 'Discover',
+    children: [
+      { label: 'Products', to: '#products' },
+      { label: 'Science', to: '#science' },
+      { label: 'Reviews', to: '#reviews' },
+      { label: 'FAQ', to: '#faq' }
+    ]
+  },
+  {
+    label: 'Support',
+    children: [
+      { label: 'Contact Us', to: '#' },
+      { label: 'Shipping', to: '#' },
+      { label: 'Returns', to: '#' },
+      { label: 'Track Order', to: '#' }
+    ]
+  },
+  {
+    label: 'Company',
+    children: [{
+      label: 'About'
+    }, {
+      label: 'Pricing'
+    }, {
+      label: 'Careers'
+    }, {
+      label: 'Blog'
+    }
+    ]
+  }
+]
+
 const email = ref('')
 
 function subscribe() {
